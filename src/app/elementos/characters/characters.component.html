@@ -1,0 +1,24 @@
+
+
+<div class="d-flex flex-wrap">
+    <div *ngFor="let data of datos " class="p-2 mr-auto">
+    <div class="card" style="width: 18rem;">
+     <img src="{{data.image}}" class="card-img-top" >
+        <div class="card-body">
+            <h5 class="card-title">{{data.name}}</h5>
+            <a  class="btn btn-info btn-lg" type="button" data-bs-toggle="collapse"  [attr.data-bs-target]="'#'+data.name | removeBlankSpace" aria-expanded="false" [attr.aria-controls]="data.name | removeBlankSpace">Más info</a>
+          <p></p>
+            <div class="collapse" id="{{data.name | removeBlankSpace}}">
+             <strong>Genero:</strong> {{data.gender}} <br>
+             <strong>Origen:</strong> {{data.origin.name}} <br>
+             <strong>Especie:</strong> {{data.species}} <br>
+             <strong>Status:</strong> {{data.status}} <br>
+          </div>
+    </div>
+
+
+    </div>
+  </div>
+</div>
+
+
